@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>val form</title>
+</head>
+<body>
+    <p id="pesan"></p>
+    <form action="form.php" method="post">
+        <input type="text" id="name" placeholder="username" required><br>
+        <input type="text" id="email" placeholder="email" required><br>
+        <input type="submit" value="Submit" onclick=simpan();>
+    </form>
+    <script>
+        function simpan() {
+            var user = document.getElementById("name").value;
+            var mail = document.getElementById("email").value;
+            if (user == "")
+            {
+                //document.getElementById("pesan").innerHTML = "Masukkan username";
+                alert("Masukkan username")
+            }   else if (mail == "") {
+                //document.getElementById("pesan").innerHTML = "Masukkan email";
+                alert("Masukkan email")
+            }   
+        }
+    </script>
+</body>
+</html>
